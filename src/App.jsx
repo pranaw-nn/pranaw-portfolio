@@ -178,11 +178,18 @@ export default function App() {
     <div className="relative min-h-screen overflow-hidden bg-black text-white">
 
       {/* Background Glows */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-blue-500/15 blur-[120px]" />
-        <div className="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-cyan-500/8 blur-[100px]" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-blue-700/10 blur-[120px]" />
-      </div>
+<div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+  {/* Main Ambient Glow */}
+  <div className="absolute top-0 left-0 h-[620px] w-[620px] rounded-full bg-blue-500/10 blur-[140px]" />
+
+  {/* Secondary Cyan Atmosphere */}
+  <div className="absolute top-1/3 right-[-120px] h-[420px] w-[420px] rounded-full bg-cyan-500/5 blur-[120px]" />
+
+  {/* Bottom Depth Glow */}
+  <div className="absolute bottom-[-120px] right-[-80px] h-[500px] w-[500px] rounded-full bg-blue-700/8 blur-[140px]" />
+
+</div>
 
       {/* Grid Overlay */}
       <div
@@ -354,10 +361,6 @@ export default function App() {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             className="relative flex shrink-0 justify-center"
           >
-            {/* Orbit rings */}
-            <div className="absolute h-80 w-80 animate-[spin_18s_linear_infinite] rounded-full border border-blue-500/10" />
-            <div className="absolute h-96 w-96 animate-[spin_28s_linear_infinite_reverse] rounded-full border border-cyan-500/8" />
-
             {/* Dot on orbit */}
             <div className="absolute h-80 w-80 animate-[spin_18s_linear_infinite]">
               <div className="absolute -top-1 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg shadow-blue-500/50" />
