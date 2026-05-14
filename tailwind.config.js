@@ -14,6 +14,9 @@ export default {
     "hover:border-cyan-500/30",
     "hover:border-green-500/30",
     "hover:border-indigo-500/30",
+    "bg-blue-500/10",
+    "bg-cyan-500/5",
+    "bg-blue-700/8",
   ],
 
   theme: {
